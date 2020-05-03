@@ -6,7 +6,7 @@ import {
   ImageView,
   ImageText,
   CarouselContainer,
-} from './styles/carousel';
+} from '_styles/carousel';
 
 const Carousel = () => {
   return (
