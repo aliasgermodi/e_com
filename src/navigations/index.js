@@ -11,7 +11,7 @@ import React, {
   import AppNavigator from './app-navigator';
   // import {AuthContext} from '_store/auth-context';
   // import SplashScreen from '_scenes/splash';
-  import {storeData, retriveData, removeValue} from '../utils/LocalStorage';
+  import {storeData, retriveData, removeValue} from '_utils/LocalStorage';
   import {View, Text} from 'react-native';
   
   export const AuthContext = createContext();
@@ -19,11 +19,7 @@ import React, {
   export const useAuthValue = () => useContext(AuthContext);
   
   function SplashScreen() {
-    return (
-      <View>
-        <Text>loading..</Text>
-      </View>
-    );
+    return <View />;
   }
   
   export default function App({}) {
