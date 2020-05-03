@@ -10,23 +10,19 @@ import {
   Button,
 } from '_styles/productDetails';
 
-const ProductDetails = () => {
+const ProductDetails = ({route}) => {
+  const {item} = route.params;
+  console.log('check', item);
   return (
     <RootSafeAreaView>
       <RootScrollView>
         <RootView>
           <Card>
-            <ImageView
-              source={require('_assets/images/shoes.jpg')}
-              resizeMode="cover"
-            />
+            <ImageView source={item.image} resizeMode="cover" />
           </Card>
-          {/* <Conat> */}
-          <Title align={'left'}>Shoes</Title>
-          <Description>
-            Sample Description
-          </Description>
-          <Price>$200</Price>
+          <Title align={'left'}>{item.title}</Title>
+          <Description>{item.desc}</Description>
+          <Price>{item.price}</Price>
           <Button>
             <Title align={'center'} color={'#ffffff'}>
               Buy Now
